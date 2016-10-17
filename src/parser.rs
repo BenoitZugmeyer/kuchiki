@@ -159,7 +159,7 @@ impl TreeSink for Sink {
     }
 
     #[inline]
-    fn get_template_contents(&self, target: NodeRef) -> NodeRef {
+    fn get_template_contents(&mut self, target: NodeRef) -> NodeRef {
         target.as_element().unwrap().template_contents.clone().unwrap()
     }
 }
